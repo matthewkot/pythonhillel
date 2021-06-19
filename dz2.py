@@ -40,7 +40,8 @@ my_str.lower()
 
 my_str = "qwer"
 if len(my_str) < 5:
-    print(my_str * 2)
+    new_str = my_str * 2
+    print(new_str)
 else :
     print(my_str)
 ################################
