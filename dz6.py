@@ -20,10 +20,9 @@ for index, symbol in enumerate(my_list):
 
 my_list = ["as", "da", "an", "love","defense", "of the", "ancients"]
 a_list = []
-for index, symbol in enumerate(my_list):
-    for str_index, str_symbol in enumerate(symbol):
-        if str_symbol == 'a':
-            a_list.append(symbol)
+for index, value in enumerate(my_list):
+    if 'a' in value:
+        a_list.append(value)
 
 # a_list = [a_list for a_list in my_list if "a" in a_list]
 # print(a_list)
@@ -41,7 +40,7 @@ for index, symbol in enumerate(my_list):
 
 my_str = "simpledimplepopitsqiush"
 my_list = []
-for index, symbol in enumerate(my_str):
+for index, symbol in enumerate(set(my_str)):
     if my_str.count(symbol) == 1:
         my_list.append(symbol)
 # print(my_list)
@@ -56,17 +55,20 @@ my_list.append((set(my_str).intersection(set(my_second_str))))
 
 my_str = "simpledimplepopitsqiush"
 my_second_str = "qwertyuiopasdfghjkkzxcn"
-my_list = []
-my_list_1 = []
-my_list_2 = []
-for index_1, symbol_1 in enumerate(my_str):
-    if my_str.count(symbol_1) == 1:
-        my_list_1.append(symbol_1)
-for index_2, symbol_2 in enumerate(my_second_str):
-    if my_second_str.count(symbol_2) == 1:
-        my_list_2.append(symbol_2)
-my_list.append(set(my_list_1).intersection(set(my_list_2)))
-# print(my_list)
+res = []
+# for index_1, symbol_1 in enumerate(my_str):
+#     if my_str.count(symbol_1) == 1:
+#         my_list_1.append(symbol_1)
+# for index_2, symbol_2 in enumerate(my_second_str):
+#     if my_second_str.count(symbol_2) == 1:
+#         my_list_2.append(symbol_2)
+# my_list.append(set(my_list_1).intersection(set(my_list_2)))
+
+my_list = list(set(my_str).intersection(set(my_second_str)))
+for index, symbol in enumerate(my_list):
+    if my_str.count(symbol) == 1 and my_second_str.count(symbol) == 1:
+        res.append(symbol)
+print(res)
 #####################################################################
 
 
