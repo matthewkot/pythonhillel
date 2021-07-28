@@ -104,7 +104,7 @@ def email_generation_func(names_list : list, domains_list : list ) -> str:
     letters = string.ascii_lowercase
     random_letters = []
     for count in range(random.randint(5, 7)):
-        random_letter = random.choice(letters);
+        random_letter = random.choice(letters)
         random_letters.append(random_letter)
     random_letter_str = ''.join(random_letters)
     random_domain = random.choice(domains_list)
