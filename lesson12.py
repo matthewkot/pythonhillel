@@ -44,6 +44,7 @@ my_string = "qwdkqdkqmwqmdqwmdqwmdqmwdq 127.0.0.1 kmkdmkfmemrgkerg,er gkmrkgmrkm
 
 
 # template = r'\d+' # все подряд(просто числовые группы)
+# template = r'[0-9a-zA-Zа-яА-Я]+' # любой символ из данных
 # template = r'\d{1,3}' # по длине от 1 до 3
 template = r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'
 
