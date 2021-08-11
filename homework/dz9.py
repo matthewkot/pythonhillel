@@ -1,6 +1,45 @@
 import os
 import re
 
+def get_domains(file_name: str) -> list:
+    with open(file_name, 'r') as txt_file:
+        data = txt_file.read()
+        data = data.replace('.', '')
+        domains_list = data.split('\n')
+    return domains_list
+
+
+domains = get_domains('homework/txt_folder/domain.txt')
+print(f'Domains list: {domains}')
+
+####################################################
+
+def get_last_names(file_name: str) -> list:
+    last_names_list = []
+    file_lines_list = get_file_lines(file_name)
+    for line in file_lines_list:
+        line = line.split('\t')
+        last_names_list.append(line[1])
+    return last_names_list
+
+
+def get_file_lines(file_name: str):
+    with open(file_name, 'r') as txt_file:
+        data = txt_file.read()
+        lines_list = data.split('\n')
+    return lines_list
+
+
+last_names = get_last_names('homework/txt_folder/names.txt')
+print(f'Last names list: {last_names}')
+
+
+
+
+############################################################
+import os
+import re
+
 month = {'January': '01',
          'February': '02',
          'March': '03',
@@ -60,3 +99,7 @@ def create_final_dicts_list(file_name: str) -> list:
 
 result_dates_list = create_final_dicts_list('homework/txt_folder/authors.txt')
 print(f'Dates list: {result_dates_list}')
+
+
+
+
