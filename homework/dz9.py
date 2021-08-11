@@ -37,7 +37,6 @@ print(f'Last names list: {last_names}')
 
 
 ############################################################
-import os
 import re
 
 month = {'January': '01',
