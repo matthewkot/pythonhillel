@@ -1,7 +1,5 @@
 import json
 import re
-import string
-
 
 def read_json(filename):
     with open(filename, "r") as json_file:
